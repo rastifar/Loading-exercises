@@ -1,0 +1,35 @@
+.outer{
+    margin:50px;
+  }
+  .outer::before {
+    content: "Loading";
+    color: #a9dff8;
+    position: absolute;
+    top: 13%;
+    left: 6%;
+  }
+  .inner {
+    border: 6px solid #b3e5fc;
+    border-radius: 50%;
+    /* width: 80px; */
+    /* height: 80px; */
+    border-top: 6px solid rgb(255, 255, 255);
+    animation: loader 2s linear 1s infinite,makeBigger 2s linear 1s infinite;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0 deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes makeBigger{
+    0%{width: 80px;height: 80px;}
+    25%{width: 85px;height: 85px; }
+    50%{width: 90px;height: 90px; }
+    75%{width: 95px;height: 95px; }
+    100%{width: 100px;height:100px; }
+  
+  }
